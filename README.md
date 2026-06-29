@@ -4,7 +4,7 @@ This project builds a live NFL play animation and predicts run/pass probability 
 
 It combines:
 - Situation-based xPass from `plays.csv` context (down, distance, field position, clock, score, formation, alignment)
-- Visual xPass from tracking geometry and player movement
+- Visual xPass from tracking geometry and skill-position player movement/location 
 - A blended projection shown frame-by-frame in the animation
 
 ## Visual Demo (.mp4)
@@ -90,23 +90,20 @@ Core Python packages used:
 - `scikit-learn`
 - `ipython`
 - `jupyter`
-- `pyarrow` (Parquet support)
+- `pyarrow`
 
 Install with:
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Platforms
-
 Tested/targeted environment:
 - Python 3.10+
 - Windows (works on macOS/Linux as well)
 - Jupyter Notebook or VS Code Notebook support
 
 ## What You Need To Run
-
 1. Python 3.10+ installed
 2. Dependencies installed from `requirements.txt`
 3. Local data files in the project root:
@@ -116,13 +113,10 @@ Tested/targeted environment:
 > Note: These Data Bowl source files are intentionally excluded from version control via `.gitignore`.
 
 ## Parquet Workflow (Recommended)
-
 To speed up loading large tracking weeks, convert each CSV once:
-
 ```bash
 c:/Users/Connor/Documents/NFL_Play_Animation/.venv/Scripts/python.exe convert_tracking_to_parquet.py
 ```
-
 After conversion, the project now prefers `tracking_week_*.parquet` automatically and falls back to CSV when Parquet is missing.
 
 ## Run Instructions
