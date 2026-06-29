@@ -11,7 +11,6 @@ It combines:
 
 <video src="play_2022092502_738_animation.mp4" controls width="900"></video>
 
-If your GitHub viewer does not render the embedded player, open the file directly:
 [play_2022092502_738_animation.mp4](play_2022092502_738_animation.mp4)
 
 ## What The Project Predicts
